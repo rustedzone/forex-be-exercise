@@ -1,0 +1,6 @@
+package: forex-be-exercise
+import:
+- package: gopkg.in/gin-gonic/gin.v1
+- package: github.com/akbarkn/aknenv
+- package: github.com/akbarkn/aknstruct
+- package: github.com/lib/pq

@@ -1,0 +1,10 @@
+FROM postgres:10-alpine
+
+RUN apk add tzdata &&\
+    cp /usr/share/zoneinfo/Asia/Jakarta /etc/localtime &&\
+    echo "Asia/Jakarta" > /etc/timezone &&\
+    apk del tzdata
+
+ENV POSTGRES_DB shopee_test
+ADD Shopee_TEST_DB_DDL.sql /docker-entrypoint-initdb.d/
+CMD [ "postgres" ]
