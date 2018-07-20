@@ -87,7 +87,7 @@ func TrackDailyTx(date string) ([]map[string]interface{}, error) {
 			l.Avg = strconv.FormatFloat(avg.Float64, 'f', -1, 64)
 		}
 
-		l.Rate = "insufficient data"
+		l.Rate = "insufficient data "
 		if rate.Valid {
 			l.Rate = strconv.FormatFloat(rate.Float64, 'f', -1, 64)
 		}
